@@ -1,41 +1,6 @@
 .loader {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 32px;
-}
-
-.loader-spinner {
-  width: 48px;
-  height: 48px;
-
-  border: 5px solid #c8d3ff;
-  border-bottom-color: #4e75ff;
-  border-radius: 50%;
-
-  display: inline-block;
-
-  animation: rotation 1s linear infinite;
-}
-
-.loader-text {
+  text-align: center;
   font-size: 16px;
   line-height: 1.5;
   color: #2e2f42;
-}
-
-.is-hidden {
-  display: none;
-}
-
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }

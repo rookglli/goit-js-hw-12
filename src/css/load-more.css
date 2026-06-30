@@ -1,0 +1,23 @@
+.load-more {
+  display: block;
+  min-width: 125px;
+  height: 40px;
+  margin: 0 auto 24px;
+  padding: 8px 16px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  color: #ffffff;
+  background-color: #4e75ff;
+
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.load-more:hover,
+.load-more:focus {
+  background-color: #6c8cff;
+}

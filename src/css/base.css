@@ -1,9 +1,6 @@
 body {
 font-family: Montserrat, Arial, sans-serif;
-color: #2e2f42;
-background-color: #ffffff;
-}
-
-main {
-padding: 36px 24px;
+  padding: 36px 16px;
+  color: #2e2f42;
+  background-color: #ffffff;
 }

@@ -1,0 +1,25 @@
+@media screen and (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 24px 16px;
+  }
+
+  .search-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 272px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,5 +1,9 @@
+
+@import url('./reset.css');
 @import url('./base.css');
-@import url('./base.css');
-@import url('./form.css');
-@import url('./loader.css');
+@import url('./search-form.css');
 @import url('./gallery.css');
+@import url('./load-more.css');
+@import url('./loader.css');
+@import url('./utils.css');
+@import url('./media.css');

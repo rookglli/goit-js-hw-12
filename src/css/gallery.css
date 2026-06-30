@@ -1,34 +1,26 @@
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 360px);
-  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 
-  margin: 0 auto;
-  padding: 0;
-
-  list-style: none;
+  max-width: 1128px;
+  margin: 0 auto 32px;
 }
 
 .gallery-item {
-  width: 360px;
-
-  list-style: none;
-
   border: 1px solid #808080;
   background-color: #ffffff;
 }
 
 .gallery-link {
   display: block;
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 .gallery-image {
   width: 100%;
   height: 200px;
-
   object-fit: cover;
 }
 
@@ -36,8 +28,7 @@
   display: flex;
   justify-content: space-around;
   gap: 8px;
-
-  padding: 4px 8px;
+  padding: 8px 12px;
 }
 
 .info-item {
@@ -45,17 +36,10 @@
   flex-direction: column;
   align-items: center;
 
-  min-width: 70px;
-
   font-size: 12px;
   line-height: 1.33;
-  color: #2e2f42;
 }
 
-.info-title {
-  font-weight: 600;
-}
-
-.info-value {
-  font-weight: 400;
+.info-label {
+  font-weight: 700;
 }

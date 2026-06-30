@@ -3,6 +3,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const gallery = document.querySelector('.gallery');
 const loader = document.querySelector('.loader');
+const loadMoreButton = document.querySelector('.load-more');
 
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
@@ -12,49 +13,44 @@ const lightbox = new SimpleLightbox('.gallery a', {
 export function createGallery(images) {
   const markup = images
     .map(
-      ({
-        webformatURL,
-        largeImageURL,
-        tags,
-        likes,
-        views,
-        comments,
-        downloads,
-      }) => {
-        return `
-          <li class="gallery-item">
-            <a class="gallery-link" href="${largeImageURL}">
-              <img class="gallery-image" src="${webformatURL}" alt="${tags}" />
-            </a>
+      image => `
+      <li class="gallery-item">
+        <a class="gallery-link" href="${image.largeImageURL}">
+          <img
+            class="gallery-image"
+            src="${image.webformatURL}"
+            alt="${image.tags}"
+          />
 
-            <div class="info">
-              <p class="info-item">
-                <span class="info-title">Likes</span>
-                <span class="info-value">${likes}</span>
-              </p>
+          <div class="info">
+            <p class="info-item">
+              <span class="info-label">Likes</span>
+              <span>${image.likes}</span>
+            </p>
 
-              <p class="info-item">
-                <span class="info-title">Views</span>
-                <span class="info-value">${views}</span>
-              </p>
+            <p class="info-item">
+              <span class="info-label">Views</span>
+              <span>${image.views}</span>
+            </p>
 
-              <p class="info-item">
-                <span class="info-title">Comments</span>
-                <span class="info-value">${comments}</span>
-              </p>
+            <p class="info-item">
+              <span class="info-label">Comments</span>
+              <span>${image.comments}</span>
+            </p>
 
-              <p class="info-item">
-                <span class="info-title">Downloads</span>
-                <span class="info-value">${downloads}</span>
-              </p>
-            </div>
-          </li>
-        `;
-      }
+            <p class="info-item">
+              <span class="info-label">Downloads</span>
+              <span>${image.downloads}</span>
+            </p>
+          </div>
+        </a>
+      </li>
+    `
     )
     .join('');
 
   gallery.insertAdjacentHTML('beforeend', markup);
+
   lightbox.refresh();
 }
 
@@ -68,4 +64,12 @@ export function showLoader() {
 
 export function hideLoader() {
   loader.classList.add('is-hidden');
+}
+
+export function showLoadMoreButton() {
+  loadMoreButton.classList.remove('is-hidden');
+}
+
+export function hideLoadMoreButton() {
+  loadMoreButton.classList.add('is-hidden');
 }
